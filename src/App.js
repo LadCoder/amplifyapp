@@ -79,7 +79,9 @@ function App() {
             <p>{note.description}</p>
             <button onClick={() => deleteNote(note)}>Delete note</button>
             {
-              note.video && <img src={note.video} style={{width: 400}} />
+              note.video && <video controls muted autoPlay>
+                <source src={note.video} type="video/mp4"></source>
+              </video>
             }
           </div>
         ))
