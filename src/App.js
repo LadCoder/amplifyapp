@@ -77,12 +77,13 @@ function App() {
           <div key={note.id || note.name}>
             <h2>{note.name}</h2>
             <p>{note.description}</p>
-            <button onClick={() => deleteNote(note)}>Delete note</button>
             {
               note.video && <video controls muted autoPlay>
                 <source src={note.video} type="video/mp4"></source>
               </video>
-            }
+            }<br/>
+            <button onClick={() => deleteNote(note)}>Delete note</button>
+
           </div>
         ))
       }
